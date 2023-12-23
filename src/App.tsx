@@ -4,23 +4,32 @@ import './App.css';
 function App() {
     return (
         <div className="App">
-            <h2>React-KapzdA</h2>
+            <AppTitle/>
             <Rating/>
             <Accordion/>
+            <Rating/>
         </div>
     );
 }
 
+let AppTitle = () => {
+    return <h2> KLIApwnz</h2>
+}
+
 function Rating() {
     return (
-        <div>
-            <div>star</div>
-            <div>star</div>
-            <div>star</div>
-            <div>star</div>
-            <div>star</div>
-        </div>
+        <>
+            <Star/>
+            <Star/>
+            <Star/>
+            <Star/>
+            <Star/>
+        </>
     )
+}
+
+function Star() {
+    return <div>star</div>
 }
 
 let Accordion = () => {
