@@ -1,5 +1,6 @@
 import React from 'react';
 import './App.css';
+import {Accordion} from "./components/accordion/Accordion";
 
 function App() {
     return (
@@ -32,22 +33,6 @@ function Star() {
     return <div>star</div>
 }
 
-let Accordion = () => {
-    return <div>
-        <AccordionTitle/>
-        <AccordionBody/>
-    </div>
-}
 
-let AccordionTitle = () => {
-    return <h3>Menu</h3>
-}
-let AccordionBody = () => {
-    return <ul>
-        <li>1</li>
-        <li>2</li>
-        <li>3</li>
-    </ul>
-}
 
 export default App;
