@@ -11,6 +11,7 @@ function App() {
     return (
         <div className="App">
             <AppTitle title={"KLIApwnz"}/>
+            <AppTitle title={"I try"}/>
             Article1
             <Rating value={4}/>
             <Accordion/>
