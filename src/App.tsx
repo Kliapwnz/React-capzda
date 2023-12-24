@@ -11,7 +11,12 @@ function App() {
             <Rating value={4}/>
             <Accordion/>
             Article2
+            <Rating value={0}/>
+            <Rating value={1}/>
             <Rating value={2}/>
+            <Rating value={3}/>
+            <Rating value={4}/>
+            <Rating value={5}/>
         </div>
     );
 }
@@ -19,7 +24,6 @@ function App() {
 let AppTitle = () => {
     return <h2> KLIApwnz</h2>
 }
-
 
 
 export default App;
