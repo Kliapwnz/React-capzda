@@ -8,10 +8,10 @@ function App() {
         <div className="App">
             <AppTitle/>
             Article1
-            <Rating/>
+            <Rating value={4}/>
             <Accordion/>
             Article2
-            <Rating/>
+            <Rating value={2}/>
         </div>
     );
 }
