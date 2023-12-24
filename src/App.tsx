@@ -34,13 +34,20 @@ function Star() {
 
 let Accordion = () => {
     return <div>
-        <h3>Menu</h3>
-        <ul>
-            <li>1</li>
-            <li>2</li>
-            <li>3</li>
-        </ul>
+        <AccordionTitle/>
+        <AccordionBody/>
     </div>
+}
+
+let AccordionTitle = () => {
+    return <h3>Menu</h3>
+}
+let AccordionBody = () => {
+    return <ul>
+        <li>1</li>
+        <li>2</li>
+        <li>3</li>
+    </ul>
 }
 
 export default App;
