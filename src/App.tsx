@@ -3,10 +3,14 @@ import './App.css';
 import {Accordion} from "./components/accordion/Accordion";
 import {Rating} from "./components/rating/Rating";
 
+type AppTitlePropsType = {
+    title: string
+}
+
 function App() {
     return (
         <div className="App">
-            <AppTitle/>
+            <AppTitle title={"KLIApwnz"}/>
             Article1
             <Rating value={4}/>
             <Accordion/>
@@ -21,8 +25,8 @@ function App() {
     );
 }
 
-let AppTitle = () => {
-    return <h2> KLIApwnz</h2>
+let AppTitle = (props: AppTitlePropsType) => {
+    return <h2> {props.title}</h2>
 }
 
 
