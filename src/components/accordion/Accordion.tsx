@@ -2,6 +2,8 @@ import React, {useState} from "react";
 
 type AccordionType = {
     titleValue: string
+    collapsed:boolean
+    onClick: (collapsed: boolean) => void
 }
 type AccordionTitleType = {
     title: string
@@ -10,13 +12,12 @@ type AccordionTitleType = {
 
 
 export let Accordion = (props: AccordionType) => {
-    let [collapsed, setCollapsed] = useState(false)
     return <div>
         <AccordionTitle title={props.titleValue}
                         onClick={() => {
-                            setCollapsed(!collapsed)
+                            props.onClick(!props.collapsed)
                         }}/>
-        {!collapsed && <AccordionBody/>}
+        {props.collapsed && <AccordionBody/>}
     </div>
 }
 

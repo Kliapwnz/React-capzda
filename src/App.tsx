@@ -11,11 +11,12 @@ type PageTitlePropsType = {
 function App() {
 
     let [ratingValue, setRatingValue] = useState<RatingValueType>(1)
+    let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
     return (
         <div className="App">
             <OnOff/>
-            <Accordion titleValue="##Menu##" />
-            <Accordion titleValue="™Berserk☺" />
+            <Accordion titleValue="##Menu##" collapsed={accordionCollapsed} onClick={setAccordionCollapsed}/>
+            <Accordion titleValue="™Berserk☺" collapsed={accordionCollapsed} onClick={setAccordionCollapsed}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
