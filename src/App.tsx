@@ -11,6 +11,7 @@ type PageTitlePropsType = {
 function App() {
     return (
         <div className="App">
+            <OnOff/>
             <Accordion titleValue="##Menu##" collapsed={false}/>
             <Accordion titleValue="™Berserk☺" collapsed={true}/>
             <Rating value={0}/>
@@ -20,6 +21,7 @@ function App() {
             <Rating value={4}/>
             <Rating value={5}/>
             <OnOff/>
+
         </div>
     );
 }

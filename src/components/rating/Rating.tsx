@@ -66,8 +66,8 @@ export function Rating(props: RatingPropsType) {
 
 function Star(props: StarPropsType) {
     if (props.selected) {
-        return <span><b>star </b></span>
+        return <span><b>☻ </b></span>
     } else {
-        return <span>star </span>
+        return <span>☺ </span>
     }
 }
