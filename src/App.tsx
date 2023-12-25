@@ -12,8 +12,8 @@ function App() {
     return (
         <div className="App">
             <OnOff/>
-            <Accordion titleValue="##Menu##" collapsed={false}/>
-            <Accordion titleValue="™Berserk☺" collapsed={true}/>
+            <Accordion titleValue="##Menu##" />
+            <Accordion titleValue="™Berserk☺" />
             <Rating value={0}/>
             <Rating value={1}/>
             <Rating value={2}/>
