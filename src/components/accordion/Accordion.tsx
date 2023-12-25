@@ -13,8 +13,7 @@ export let Accordion = (props: AccordionType) => {
     let [collapsed, setCollapsed] = useState(false)
     return <div>
         <AccordionTitle title={props.titleValue}/>
-        <button onClick={()=>{setCollapsed(true)}}>TOGGLE</button>
-        <button onClick={()=>{setCollapsed(false)}}>SHOW</button>
+        <button onClick={()=>{setCollapsed(!collapsed)}}>TOGGLE</button>
         {!collapsed && <AccordionBody/>}
     </div>
 }
