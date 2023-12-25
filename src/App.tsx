@@ -10,19 +10,8 @@ type PageTitlePropsType = {
 function App() {
     return (
         <div className="App">
-            <PageTitle title={"KLIApwnz"}/>
-            <PageTitle title={"I try"}/>
-            Article1
-            <Rating value={4}/>
-            <Accordion title="Menu" collapsed={true}/>
-            <Accordion title="Berserk" collapsed={true}/>
-            Article2
-            <Rating value={0}/>
-            <Rating value={1}/>
-            <Rating value={2}/>
-            <Rating value={3}/>
-            <Rating value={4}/>
-            <Rating value={5}/>
+            <Accordion titleValue="Menu" collapsed={true}/>
+            <Accordion titleValue="Berserk" collapsed={true}/>
         </div>
     );
 }
