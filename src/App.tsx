@@ -14,8 +14,8 @@ function App() {
             <PageTitle title={"I try"}/>
             Article1
             <Rating value={4}/>
-            <Accordion title="Menu"/>
-            <Accordion title="Berserk"/>
+            <Accordion title="Menu" collapsed={true}/>
+            <Accordion title="Berserk" collapsed={false}/>
             Article2
             <Rating value={0}/>
             <Rating value={1}/>
