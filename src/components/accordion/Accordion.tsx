@@ -4,8 +4,8 @@ type AccordionType = {
     title: string
     collapsed: boolean
 }
-type AccordionTitleType={
-    title:string
+type AccordionTitleType = {
+    title: string
 }
 
 export let Accordion = (props: AccordionType) => {
