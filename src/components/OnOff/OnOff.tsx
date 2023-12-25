@@ -1,10 +1,12 @@
 import React from 'react';
 
 type OnOffType = {
-    on: boolean
+    /* on: boolean*/
 }
 
 export let OnOff = (props: OnOffType) => {
+    const on = false
+
 
     const indicatorStyle = {
         width: "15px",
@@ -12,7 +14,8 @@ export let OnOff = (props: OnOffType) => {
         borderRadius: "7px",
         border: "1px solid black",
         display: "inline-block",
-        marginLeft: "15px"
+        marginLeft: "15px",
+        backgroundColor: on ? "green" : "red"
     }
     return (
         <div>
