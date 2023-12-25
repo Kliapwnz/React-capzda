@@ -1,22 +1,25 @@
 import React, {useState} from "react";
 
 
-type RatingType = {}
+export type RatingValueType = 0 | 1 | 2 | 3 | 4 | 5
+
+type RatingType = {
+    value: RatingValueType
+    onClick: (value: RatingValueType) => void
+}
 
 type StarType = {
     selected: boolean
-    value: 1 | 2 | 3 | 4 | 5
-    setValue: (value: 1 | 2 | 3 | 4 | 5) => void
+    onClick: () => void
 }
 
 export function Rating(props: RatingType) {
-    let [value, setValue] = useState(0)
     return <div>
-        <Star selected={value > 0} setValue={setValue} value={1}/>
-        <Star selected={value > 1} setValue={setValue} value={2}/>
-        <Star selected={value > 2} setValue={setValue} value={3}/>
-        <Star selected={value > 3} setValue={setValue} value={4}/>
-        <Star selected={value > 4} setValue={setValue} value={5}/>
+        <Star selected={props.value > 0} onClick={() => props.onClick(1)}/>
+        <Star selected={props.value > 1} onClick={() => props.onClick(2)}/>
+        <Star selected={props.value > 2} onClick={() => props.onClick(3)}/>
+        <Star selected={props.value > 3} onClick={() => props.onClick(4)}/>
+        <Star selected={props.value > 4} onClick={() => props.onClick(5)}/>
     </div>
 
 }
@@ -24,8 +27,8 @@ export function Rating(props: RatingType) {
 function Star(props: StarType) {
     // return props.selected ? <span><b>☻ </b></span> : <span>☺ </span>
     return <span
-        onClick={(e) => {
-            props.setValue(props.value)
+        onClick={() => {
+            props.onClick()
         }}>
         {props.selected ? <b>☻ </b> : "☺ "}</span>
 

@@ -1,7 +1,7 @@
-import React from 'react';
+import React, {useState} from 'react';
 import './App.css';
 import {Accordion} from "./components/accordion/Accordion";
-import {Rating} from "./components/rating/Rating";
+import {Rating, RatingValueType} from "./components/rating/Rating";
 import {OnOff} from "./components/OnOff/OnOff";
 
 type PageTitlePropsType = {
@@ -9,17 +9,19 @@ type PageTitlePropsType = {
 }
 
 function App() {
+
+    let [ratingValue, setRatingValue] = useState<RatingValueType>(1)
     return (
         <div className="App">
             <OnOff/>
             <Accordion titleValue="##Menu##" />
             <Accordion titleValue="™Berserk☺" />
-            <Rating />
-            <Rating />
-            <Rating />
-            <Rating />
-            <Rating />
-            <Rating />
+            <Rating value={ratingValue} onClick={setRatingValue}/>
+            <Rating value={ratingValue} onClick={setRatingValue}/>
+            <Rating value={ratingValue} onClick={setRatingValue}/>
+            <Rating value={ratingValue} onClick={setRatingValue}/>
+            <Rating value={ratingValue} onClick={setRatingValue}/>
+            <Rating value={ratingValue} onClick={setRatingValue}/>
             <OnOff/>
 
         </div>
