@@ -1,26 +1,27 @@
-import React from "react";
+import React, {useState} from "react";
 
-type StarPropsType = {
-    selected: boolean
+
+type RatingType ={
+    value:number
 }
-type RatingPropsType = {
-    value: 0 | 1 | 2 | 3 | 4 | 5
+type StatType ={
+    value:number
 }
 
-export function Rating(props: RatingPropsType) {
-
+export function Rating(props:RatingType) {
+let [value, setValue] = useState(0 | 1 | 2 | 3 | 4 | 5)
     return <div>
-        <Star selected={props.value > 0}/>
-        <Star selected={props.value > 1}/>
-        <Star selected={props.value > 2}/>
-        <Star selected={props.value > 3}/>
-        <Star selected={props.value > 4}/>
+        <Star /><button onClick={()=>{setValue(1)}}>1</button>
+        <Star /><button onClick={()=>{setValue(2)}}>2</button>
+        <Star /><button onClick={()=>{setValue(3)}}>3</button>
+        <Star /><button onClick={()=>{setValue(4)}}>4</button>
+        <Star /><button onClick={()=>{setValue(5)}}>5</button>
     </div>
 
 }
 
-function Star(props: StarPropsType) {
-    if (props.selected) {
+function Star(props:StatType) {
+    if (props.value) {
         return <span><b>☻ </b></span>
     } else {
         return <span>☺ </span>
