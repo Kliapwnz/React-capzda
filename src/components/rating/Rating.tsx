@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 
 
 export type RatingValueType = 0 | 1 | 2 | 3 | 4 | 5
@@ -25,11 +25,10 @@ export function Rating(props: RatingType) {
 }
 
 function Star(props: StarType) {
-    // return props.selected ? <span><b>☻ </b></span> : <span>☺ </span>
     return <span
         onClick={() => {
             props.onClick()
         }}>
         {props.selected ? <b>☻ </b> : "☺ "}</span>
-    
+
 }
