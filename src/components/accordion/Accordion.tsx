@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React from "react";
 
 type AccordionType = {
     titleValue: string
@@ -14,9 +14,8 @@ type AccordionTitleType = {
 export let Accordion = (props: AccordionType) => {
     return <div>
         <AccordionTitle title={props.titleValue}
-                        onClick={() => {
-                            props.onChange()
-                        }}/>
+                        onClick={props.onChange}
+        />
         {!props.collapsed && <AccordionBody/>}
     </div>
 }
