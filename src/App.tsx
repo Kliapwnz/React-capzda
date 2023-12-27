@@ -13,6 +13,7 @@ function App() {
     let [ratingValue, setRatingValue] = useState<RatingValueType>(1)
     let [accordionCollapsed, setAccordionCollapsed] = useState<boolean>(false)
     let [on, setOn] = useState<boolean>(false);
+
     return (
         <div className="App">
             <OnOff onClick={setOn} value={on}/>
