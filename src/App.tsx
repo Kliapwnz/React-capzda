@@ -16,6 +16,7 @@ function App() {
 
     return (
         <div className="App">
+            <PageTitle title="KLIApwnz"/>
             <OnOff onClick={setOn} value={on}/>
             <Accordion titleValue="##Menu##" collapsed={accordionCollapsed} onClick={setAccordionCollapsed}/>
             <Accordion titleValue="™Berserk☺" collapsed={accordionCollapsed} onClick={setAccordionCollapsed}/>
