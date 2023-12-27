@@ -20,11 +20,11 @@ function App() {
             <OnOff onClick={setOn} value={on}/>
             <Accordion titleValue="##Menu##"
                        collapsed={accordionCollapsed}
-                       onChange={()=>setAccordionCollapsed(!accordionCollapsed)}
+                       onChange={() => setAccordionCollapsed(!accordionCollapsed)}
             />
             <Accordion titleValue="™Berserk☺"
                        collapsed={accordionCollapsed}
-                       onChange={()=>setAccordionCollapsed(!accordionCollapsed)}
+                       onChange={() => setAccordionCollapsed(!accordionCollapsed)}
             />
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
