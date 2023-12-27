@@ -18,8 +18,8 @@ function App() {
         <div className="App">
             <PageTitle title="KLIApwnz"/>
             <OnOff onClick={setOn} value={on}/>
-            <Accordion titleValue="##Menu##" collapsed={accordionCollapsed} onClick={setAccordionCollapsed}/>
-            <Accordion titleValue="™Berserk☺" collapsed={accordionCollapsed} onClick={setAccordionCollapsed}/>
+            <Accordion titleValue="##Menu##" collapsed={accordionCollapsed} onChange={setAccordionCollapsed}/>
+            <Accordion titleValue="™Berserk☺" collapsed={accordionCollapsed} onChange={setAccordionCollapsed}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
             <Rating value={ratingValue} onClick={setRatingValue}/>
