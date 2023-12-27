@@ -31,10 +31,5 @@ function Star(props: StarType) {
             props.onClick()
         }}>
         {props.selected ? <b>☻ </b> : "☺ "}</span>
-
-    // if (props.selected) {
-    //     return <span><b>☻ </b></span>
-    // } else {
-    //     return <span>☺ </span>
-    // }
+    
 }
