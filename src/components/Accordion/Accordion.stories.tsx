@@ -16,6 +16,12 @@ export const FirstStory: Story = {
         collapsed: true,
     }
 }
+
+export const ChangingAccordion = () => {
+    const [value, setValue] = useState<boolean>(true)
+    return <Accordion titleValue="™Berserk☺ " collapsed={value} onChange={()=>setValue(!value)}/>
+}
+
 export const CollapsedAccordion = () => {
     return <Accordion titleValue="##Menu## Collapsed"
                       collapsed={true}
