@@ -26,8 +26,7 @@ export const CollapsedAccordion = () => {
 export const OpenedAccordion = () => {
    return <Accordion titleValue="Accordion Opened"
                      collapsed={false}
-                     onChange={() => {
-                     }}
+                     onChange={onChangeHandler}
    />
 }
 export const AccordionDemo = () => {
