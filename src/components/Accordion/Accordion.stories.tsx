@@ -23,14 +23,14 @@ export const ChangingAccordion = () => {
 }
 
 export const CollapsedAccordion = () => {
-    return <Accordion titleValue="##Menu## Collapsed"
+    return <Accordion titleValue="Accordion Collapsed"
                       collapsed={true}
                       onChange={() => {
                       }}
     />
 }
 export const OpenedAccordion = () => {
-    return <Accordion titleValue="™Berserk☺ Opened"
+    return <Accordion titleValue="Accordion Opened"
                       collapsed={false}
                       onChange={() => {
                       }}
