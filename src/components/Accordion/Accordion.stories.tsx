@@ -38,7 +38,7 @@ export const OpenedAccordion = () => {
 }
 export const Accordion1 = () => {
     const [collapsed, setCollapsed] = useState(false)
-    return <Accordion titleValue="™Berserk☺ "
+    return <Accordion titleValue="Accordion"
                       collapsed={collapsed}
                       onChange={() => {
                           setCollapsed(!collapsed)
