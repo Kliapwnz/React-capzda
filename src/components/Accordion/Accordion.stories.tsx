@@ -16,20 +16,20 @@ export const ChangingAccordion = () => {
 const onChangeHandler = action("accordion mode!!")
 
 export const CollapsedAccordion = () =>
-   <Accordion titleValue="Accordion Collapsed"
+   <Accordion titleValue={"Accordion Collapsed"}
               collapsed={true}
               onChange={onChangeHandler}
    />
 
 export const OpenedAccordion = () =>
-   <Accordion titleValue="Accordion Opened"
+   <Accordion titleValue={"Accordion Opened"}
               collapsed={false}
               onChange={onChangeHandler}
    />
 
 export const AccordionDemo = () => {
    const [collapsed, setCollapsed] = useState(false)
-   return <Accordion titleValue="Accordion"
+   return <Accordion titleValue={"Accordion"}
                      collapsed={collapsed}
                      onChange={() => {
                         setCollapsed(!collapsed)
