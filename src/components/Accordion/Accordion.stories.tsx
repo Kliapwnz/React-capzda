@@ -1,5 +1,3 @@
-import type {Meta, StoryObj} from '@storybook/react';
-
 import {Accordion} from './Accordion';
 import React, {useState} from "react";
 import {action} from "@storybook/addon-actions";
@@ -15,20 +13,20 @@ export const ChangingAccordion = () => {
    return <Accordion titleValue="Accordion " collapsed={value} onChange={() => setValue(!value)}/>
 }
 
-const onChangeHandler = action("onChange")
+const onChangeHandler = action("accordion mode!!")
 
-export const CollapsedAccordion = () => {
-   return <Accordion titleValue="Accordion Collapsed"
-                     collapsed={true}
-                     onChange={onChangeHandler}
+export const CollapsedAccordion = () =>
+   <Accordion titleValue="Accordion Collapsed"
+              collapsed={true}
+              onChange={onChangeHandler}
    />
-}
-export const OpenedAccordion = () => {
-   return <Accordion titleValue="Accordion Opened"
-                     collapsed={false}
-                     onChange={onChangeHandler}
+
+export const OpenedAccordion = () =>
+   <Accordion titleValue="Accordion Opened"
+              collapsed={false}
+              onChange={onChangeHandler}
    />
-}
+
 export const AccordionDemo = () => {
    const [collapsed, setCollapsed] = useState(false)
    return <Accordion titleValue="Accordion"
