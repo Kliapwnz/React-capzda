@@ -4,6 +4,7 @@ type AccordionType = {
    titleValue: string
    collapsed: boolean
    onChange: () => void
+   items: Array<string>
 }
 type AccordionTitleType = {
    title: string
@@ -16,7 +17,7 @@ export let Accordion = (props: AccordionType) => {
       <AccordionTitle title={props.titleValue}
                       onClick={props.onChange}
       />
-      {!props.collapsed && <AccordionBody/>}
+      {!props.collapsed && <AccordionBody items={props.items}/>}
    </div>
 }
 
@@ -26,10 +27,13 @@ let AccordionTitle = (props: AccordionTitleType) => {
       <h3 onClick={(event) => props.onClick()}>{props.title}</h3>
    )
 }
-let AccordionBody = () => {
+
+type AccordionBodyPropsType = {
+   items: Array<string>
+}
+
+let AccordionBody = (props:AccordionBodyPropsType) => {
    return <ul>
-      <li>1</li>
-      <li>2</li>
-      <li>3</li>
+      {props.items.map(i => <li>{i}</li> )}
    </ul>
 }

@@ -10,7 +10,11 @@ export default {
 
 export const ChangingAccordion = () => {
    const [value, setValue] = useState<boolean>(true)
-   return <Accordion titleValue="Accordion " collapsed={value} onChange={() => setValue(!value)}/>
+   return <Accordion titleValue="Accordion "
+                     collapsed={value}
+                     onChange={() => setValue(!value)}
+                     items={["Evgeniy", "Anastasiya", "Kristina"]}
+   />
 }
 
 const onChangeHandler = action("accordion mode!!")
@@ -19,12 +23,14 @@ export const CollapsedAccordion = () =>
    <Accordion titleValue={"Accordion Collapsed"}
               collapsed={true}
               onChange={onChangeHandler}
+              items={[]}
    />
 
 export const OpenedAccordion = () =>
    <Accordion titleValue={"Accordion Opened"}
               collapsed={false}
               onChange={onChangeHandler}
+              items={["Evgeniy", "Anastasiya", "Kristina"]}
    />
 
 export const AccordionDemo = () => {
@@ -34,5 +40,6 @@ export const AccordionDemo = () => {
                      onChange={() => {
                         setCollapsed(!collapsed)
                      }}
+                     items={["Evgeniy", "Anastasiya", "Kristina"]}
    />
 }
