@@ -13,24 +13,34 @@ export const ChangingAccordion = () => {
    return <Accordion titleValue="Accordion "
                      collapsed={value}
                      onChange={() => setValue(!value)}
-                     items={["Evgeniy", "Anastasiya", "Kristina"]}
+                     items={[
+                        {title: "Evgeniy", value: 1},
+                        {title: "Anastasiya", value: 1},
+                        {title: "Kristina", value: 1}]}
+                     onClick={onClickCallback}
    />
 }
 
 const onChangeHandler = action("accordion mode!!")
+const onClickCallback = action("some item was clicked")
 
 export const CollapsedAccordion = () =>
    <Accordion titleValue={"Accordion Collapsed"}
               collapsed={true}
               onChange={onChangeHandler}
               items={[]}
+              onClick={onClickCallback}
    />
 
 export const OpenedAccordion = () =>
    <Accordion titleValue={"Accordion Opened"}
               collapsed={false}
               onChange={onChangeHandler}
-              items={["Evgeniy", "Anastasiya", "Kristina"]}
+              items={[
+                 {title: "Evgeniy", value: 1},
+                 {title: "Anastasiya", value: 1},
+                 {title: "Kristina", value: 1}]}
+              onClick={onClickCallback}
    />
 
 export const AccordionDemo = () => {
@@ -40,6 +50,10 @@ export const AccordionDemo = () => {
                      onChange={() => {
                         setCollapsed(!collapsed)
                      }}
-                     items={["Evgeniy", "Anastasiya", "Kristina"]}
+                     items={[
+                        {title: "Evgeniy", value: 1},
+                        {title: "Anastasiya", value: 1},
+                        {title: "Kristina", value: 1}]}
+                     onClick={onClickCallback}
    />
 }
