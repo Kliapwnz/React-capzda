@@ -1,4 +1,4 @@
-import {useState} from "react";
+import {ChangeEvent, useState} from "react";
 
 export default {
    title: "input"
@@ -6,9 +6,10 @@ export default {
 
 export const ControlledInput = () => {
    const [parentValue, setParentValue] = useState("")
-   return <input value={parentValue} onChange={(event) => {
-      setParentValue(event.currentTarget.value)
-   }}/>
+   const onChangeHandler = (e: ChangeEvent<HTMLInputElement>) => {
+      setParentValue(e.currentTarget.value)
+   }
+   return <input value={parentValue} onChange={onChangeHandler}/>
 }
 export const ControlledCheckbox = () => {
 
