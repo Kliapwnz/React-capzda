@@ -1,5 +1,4 @@
 import {useState} from "react";
-import {action} from "@storybook/addon-actions";
 
 export default {
    title: "input"
@@ -19,4 +18,4 @@ export const ControlledSelect = () => {
 }
 
 
-export const ControlledInputWithFixedValue = () => <input value={"KLIA"}/>
+export const ControlledInputWithFixedValue = () => <input value={"Front"}/>
